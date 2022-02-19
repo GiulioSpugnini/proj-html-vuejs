@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header/>
-    <Main/>
-    <Footer/>
+    <Header :navItems='navItems' />
+    <Main />
+    <Footer />
   </div>
 </template>
 
@@ -17,10 +17,15 @@ export default {
     Header,
     Main,
     Footer,
+  },
+  data(){
+    return{
+      navItems: ['Home','Pages','Shop','Shortcodes','Support','Contact'],
+    }
   }
 }
 </script>
 
 <style lang="scss">
-@import './assets/scss/style.scss';
+@import "./assets/scss/style.scss";
 </style>
