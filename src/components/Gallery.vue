@@ -43,13 +43,13 @@
           </div>
         </div>
       </div>
-      <div class="col-6">
-        <div>
+      <div class="col-6 text-center">
+        <div class="d-flex justify-content-center">
           <figure v-for="(image, index) in 1" :key="index" id="selectedImg">
             <img :src="images[currentIndex]" />
           </figure>
         </div>
-        <div class="d-flex">
+        <div class="d-flex justify-content-center">
           <figure v-for="(image, index) in images" :key="index">
             <img class="imgs" role="button" @click="isActive" :src="image" />
           </figure>
@@ -85,9 +85,10 @@ section {
   padding: 100px 0 100px 0;
 }
 figure {
-  .imgs {
-    width: 160px;
+  .imgs:nth-child(1) {
+    width: 136px;
     margin-right: 10px;
+    margin-left: 10px;
   }
 }
 #clock,
@@ -97,6 +98,6 @@ figure {
   line-height: 90px;
 }
 #selectedImg img {
-  max-width: 500px;
+  max-width: 450px;
 }
 </style>
