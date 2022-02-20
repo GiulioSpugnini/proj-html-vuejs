@@ -1,19 +1,24 @@
 <template>
   <main>
-      <Jumbotron/>
+    <Jumbotron />
+    <SliderInfo />
+    <Gallery />
   </main>
 </template>
 
 <script>
-import Jumbotron from './Jumbotron.vue';
+import Jumbotron from "./Jumbotron.vue";
+import SliderInfo from "./SliderInfo.vue";
+import Gallery from "./Gallery.vue";
 export default {
-name: 'Main',
-components:{
+  name: "Main",
+  components: {
     Jumbotron,
-}
-}
+    SliderInfo,
+    Gallery,
+  },
+};
 </script>
 
 <style>
-
 </style>
