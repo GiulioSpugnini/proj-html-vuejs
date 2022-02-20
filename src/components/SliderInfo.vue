@@ -55,13 +55,5 @@ figure {
   border-radius: 50%;
   padding: 50px;
 }
-.bg-orange {
-  background-color: #fe6601;
-}
-.bg-purple {
-  background-color: #4c4a9b;
-}
-.purple{
-  color: #4c4a9b;
-}
+
 </style>
