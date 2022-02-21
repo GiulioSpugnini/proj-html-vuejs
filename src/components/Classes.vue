@@ -89,6 +89,9 @@ export default {
 </script>
 
 <style scoped>
+section{
+  padding: 100px 0 100px 0;
+}
 .classe {
   max-width: 100%;
 }

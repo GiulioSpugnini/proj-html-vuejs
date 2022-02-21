@@ -5,6 +5,7 @@
     <Gallery />
     <Stats/>
     <Classes/>
+    <InfoList/>
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import SliderInfo from "./SliderInfo.vue";
 import Gallery from "./Gallery.vue";
 import Stats from "./Stats.vue";
 import Classes from "./Classes.vue";
+import InfoList from "./InfoList.vue";
 export default {
   name: "Main",
   components: {
@@ -22,6 +24,7 @@ export default {
     Gallery,
     Stats,
     Classes,
+    InfoList,
   },
 };
 </script>
