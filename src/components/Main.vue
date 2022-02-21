@@ -4,6 +4,7 @@
     <SliderInfo />
     <Gallery />
     <Stats/>
+    <Classes/>
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import Jumbotron from "./Jumbotron.vue";
 import SliderInfo from "./SliderInfo.vue";
 import Gallery from "./Gallery.vue";
 import Stats from "./Stats.vue";
+import Classes from "./Classes.vue";
 export default {
   name: "Main",
   components: {
@@ -19,6 +21,7 @@ export default {
     SliderInfo,
     Gallery,
     Stats,
+    Classes,
   },
 };
 </script>
