@@ -28,4 +28,7 @@ export default {
 figcaption{
   color: $navbar-color;
 }
+li:hover{
+  background-color: #fe6601;
+}
 </style>

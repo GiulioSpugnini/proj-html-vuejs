@@ -3,9 +3,10 @@
     <div class="position-relative jumbo">
       <img id="car" class="position-absolute" src="../assets/img/slider_slide3_img3.png" />
       <img id="breaks" class="position-absolute" src="../assets/img/slider_slide3_img2.png" />
-      <img id="twoFemale" class="position-absolute" src="../assets/img/slider_slide3_img1.png" />
-      <img id="baby" class="position-absolute" src="../assets/img/slider_slide1_img1.png" />
-      <img id="babyAbaco" class="position-absolute" src="../assets/img/slider_slide1_img2.png" />
+      <div v-for="(baby,index) in babies" :key="index">
+      <img v-if="index===currentIndex" class="position-absolute" :style="{top: baby.top}&& {left: baby.left}" :src="baby.img" />
+
+      </div>
       <div id="jumboFooter" class="position-absolute w-100" :style="{ backgroundImage: 'url(' + jumboFooterBg + ')' }">
           <div class="container d-flex justify-content-between">
               <h2 class="my-5 fs-1 d-inline text-light">How to Enroll Your Child to a Class?</h2>
@@ -21,17 +22,38 @@ export default {
   name: "jumbotron",
   data() {
     return {
+      currentIndex: 0,
       autoplay: undefined,
+      babies:[
+        {
+          img: require("../assets/img/slider_slide3_img1.png"),
+          top: '10%',
+          left: '50%',
+         
+        },
+        {
+          img: require("../assets/img/slider_slide1_img1.png"),
+          top: '0%',
+          left: '5%',
+          
+        },
+        {
+          img: require("../assets/img/slider_slide1_img2.png"),
+          top: '0%',
+          left: '55%',
+         
+        },
+      ],
       jumboBg: require("../assets/img/slider_slide3_background.png"),
       jumboFooterBg: require("../assets/img/pattern.png"),
     };
   },
   methods:{
-    nextImg() {
-            this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : (this.currentIndex + 1);
+     isActive(index) {
+            return index == this.currentIndex;
         },
-        prevImg() {
-            this.currentIndex = (this.currentIndex === 0) ? (this.images.length - 1) : (this.currentIndex - 1);
+    nextImg() {
+            this.currentIndex = (this.currentIndex === 2) ? 0 : (this.currentIndex + 1);
         },
     startAutoplay() {
             this.autoplay = setInterval(this.nextImg, 3000)
