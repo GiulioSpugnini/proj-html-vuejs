@@ -34,7 +34,6 @@ export default {
 
 <style scoped>
 section {
-  margin-top: 100px;
   min-height: 100px;
 }
 </style>

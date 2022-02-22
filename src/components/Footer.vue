@@ -74,7 +74,6 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding-top: 100px;
-  padding-bottom: 100px;
   .divisor {
     border-bottom: 2px solid slategray;
     max-width: 50px;
