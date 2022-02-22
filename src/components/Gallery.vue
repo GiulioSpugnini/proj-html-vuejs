@@ -107,7 +107,7 @@ img:hover{
   border-bottom: 2px solid #fe6601;
 }
 button:hover{
-  background-color: #fe6601;
+  background-color: #fe6601 !important;
   color: white !important;
 }
 </style>
