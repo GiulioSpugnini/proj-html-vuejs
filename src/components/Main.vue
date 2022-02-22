@@ -10,6 +10,7 @@
     <Staff/>
     <Quotes/>
     <News/>
+    <Maps/>
   </main>
 </template>
 
@@ -24,6 +25,7 @@ import JumboGallery from "./JumboGallery.vue";
 import Staff from "./Staff.vue";
 import Quotes from "./Quotes.vue";
 import News from "./News.vue";
+import Maps from "./Maps.vue";
 export default {
   name: "Main",
   components: {
@@ -37,6 +39,7 @@ export default {
     Staff,
     Quotes,
     News,
+    Maps,
 
   },
 };
