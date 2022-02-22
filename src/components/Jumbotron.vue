@@ -102,4 +102,8 @@ top: 0%;
 button{
   border: 2px solid white;
 }
+button:hover{
+ background-color: white !important;
+ color: #4c4a9b !important;
+}
 </style>

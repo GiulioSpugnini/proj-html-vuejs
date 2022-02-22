@@ -55,4 +55,8 @@ img {
   top: 100%;
   left: 0;
 }
+button:hover{
+ background-color: white !important;
+ color: #4c4a9b !important;
+}
 </style>
