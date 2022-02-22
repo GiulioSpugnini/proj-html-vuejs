@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white text-center">
+  <section class="bg-gray text-center align-self-end">
     <div class="container d-flex justify-content-center align-items-center">
       <div
         class="bg-orange text-white mx-1 my-4"
@@ -9,7 +9,7 @@
         <img :src="icon" alt="" />
       </div>
     </div>
-    <p class="text-secondary">
+    <p class="text-secondary m-0">
       Fable - Children kindergarten WordPress Theme by QuanticaLabs
     </p>
   </section>
@@ -34,6 +34,7 @@ export default {
 
 <style scoped>
 section {
+  margin-top: 100px;
   min-height: 100px;
 }
 </style>

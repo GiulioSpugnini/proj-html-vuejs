@@ -11,6 +11,7 @@
     <Quotes/>
     <News/>
     <Maps/>
+    <Contacts/>
   </main>
 </template>
 
@@ -26,6 +27,7 @@ import Staff from "./Staff.vue";
 import Quotes from "./Quotes.vue";
 import News from "./News.vue";
 import Maps from "./Maps.vue";
+import Contacts from "./Contacts.vue";
 export default {
   name: "Main",
   components: {
@@ -40,6 +42,7 @@ export default {
     Quotes,
     News,
     Maps,
+    Contacts,
 
   },
 };

@@ -1,5 +1,8 @@
 <template>
-  <footer class="position-relative bg-purple">
+  <footer
+    class="position-relative"
+    :style="{ backgroundImage: 'url(' + FooterBg + ')' }"
+  >
     <div class="container">
       <div class="row">
         <div
@@ -13,7 +16,9 @@
               <div class="divisor"></div>
             </li>
             <li class="my-3">{{ footerList.text }}</li>
-            <li class="my-4" v-if="index == 0"><img :src="footerList.img" alt="" /></li>
+            <li class="my-4" v-if="index == 0">
+              <img :src="footerList.img" alt="" />
+            </li>
             <li
               class="border p-2 m-1 list-"
               v-for="(month, index) in footerList.months"
@@ -34,8 +39,12 @@
                   <div class="col-6 w-100"><img :src="post.img" alt="" /></div>
                   <div class="col-6 d-flex flex-wrap w-100">
                     <h6 class="">{{ post.title }}</h6>
-                    <img class="icon" :src="require('../assets/img/date_footer.png')" alt="">
-                    <p>{{post.date}}</p>
+                    <img
+                      class="icon"
+                      :src="require('../assets/img/date_footer.png')"
+                      alt=""
+                    />
+                    <p>{{ post.date }}</p>
                   </div>
                 </div>
               </div>
@@ -44,7 +53,7 @@
         </div>
       </div>
     </div>
-    <FooterBottom/>
+    <FooterBottom />
   </footer>
 </template>
 
@@ -53,13 +62,19 @@ import FooterBottom from "./FooterBottom.vue";
 export default {
   name: "Footer",
   props: ["footerLists"],
-  components:{FooterBottom},
+  components: { FooterBottom },
+  data() {
+    return {
+      FooterBg: require("../assets/img/pattern.png"),
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 footer {
-  margin-top: 180px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   .divisor {
     border-bottom: 2px solid slategray;
     max-width: 50px;
@@ -74,10 +89,10 @@ img {
   max-height: 15px;
   margin-right: 10px;
 }
-h6{
+h6 {
   font-size: 14px;
 }
-p{
+p {
   font-size: 12px;
 }
 </style>
