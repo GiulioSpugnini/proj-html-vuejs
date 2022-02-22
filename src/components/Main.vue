@@ -8,6 +8,7 @@
     <InfoList/>
     <JumboGallery/>
     <Staff/>
+    <Quotes/>
   </main>
 </template>
 
@@ -20,6 +21,7 @@ import Classes from "./Classes.vue";
 import InfoList from "./InfoList.vue";
 import JumboGallery from "./JumboGallery.vue";
 import Staff from "./Staff.vue";
+import Quotes from "./Quotes.vue";
 export default {
   name: "Main",
   components: {
@@ -31,6 +33,7 @@ export default {
     InfoList,
     JumboGallery,
     Staff,
+    Quotes,
 
   },
 };
