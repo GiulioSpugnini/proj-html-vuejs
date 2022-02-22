@@ -3,11 +3,11 @@
     <div class="container d-flex">
       <div class="col-6 d-flex flex-column justify-content-between">
         <div>
-          <button class="p-2 border-0">Overview</button>
-          <button class="p-2 border-0 mx-4">Our Mission</button>
+          <button class="p-3 text-secondary border-0">Overview</button>
+          <button class="p-3 text-secondary border-0 mx-4">Our Mission</button>
         </div>
         <div>
-          <h3 class="w-75">
+          <h3 class="w-75 purple">
             Our philosophy is learning through play as we offer a stimulating
             environment for children.
           </h3>
@@ -20,8 +20,8 @@
             <img src="../assets/img/clock_alt.png" alt="" />
           </div>
           <div>
-            <h4 class="mx-4">Full Day Sessions</h4>
-            <p class="w-75 mx-4">
+            <h4 class="mx-4 purple">Full Day Sessions</h4>
+            <p class="w-75 mx-4 text-secondary">
               Pulvinar est metro ligula blandit maecenas retrum gravida
               cuprum.Maecenas node estibulum.
             </p>
@@ -35,8 +35,8 @@
             <img src="../assets/img/diagram_alt.png" alt="" />
           </div>
           <div>
-            <h4 class="mx-4">Full Day Sessions</h4>
-            <p class="w-75 mx-4">
+            <h4 class="mx-4 purple">Full Day Sessions</h4>
+            <p class="w-75 mx-4 text-secondary">
               Pulvinar est metro ligula blandit maecenas retrum gravida
               cuprum.Maecenas node estibulum.
             </p>
@@ -51,7 +51,7 @@
         </div>
         <div class="d-flex justify-content-center">
           <figure v-for="(image, index) in images" :key="index">
-            <img class="imgs" role="button" @click="isActive" :src="image" />
+            <img class="imgs" role="button" @click="isActive(index)" :src="image" />
           </figure>
         </div>
       </div>
@@ -72,9 +72,9 @@ export default {
       ],
     };
   },
-  computed: {
+  methods: {
     isActive(index) {
-      return this.currentIndex === index;
+      return this.currentIndex=index ;
     },
   },
 };

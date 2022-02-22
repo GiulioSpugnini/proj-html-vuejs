@@ -2,7 +2,7 @@
   <section class="container">
     <div class="row text-center">
       <div class="col-12">
-        <h1>Welcome to Fable</h1>
+        <h1 class="purple">Welcome to Fable</h1>
         <p class="text-secondary">Fable daycare, preschool, and kindergarten</p>
         <img src="../assets/img/header_divider.png" alt="" />
       </div>

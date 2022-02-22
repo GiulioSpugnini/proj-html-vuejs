@@ -11,7 +11,7 @@
           <h2 class="my-5 fs-1 d-inline text-light">
             See Our Kindergarten Photo Gallery!
           </h2>
-          <button class="px-3 m-5">VIEW GALLERY</button>
+          <button class="px-3 m-5 bg-transparent text-white">VIEW GALLERY</button>
         </div>
       </div>
     </div>
