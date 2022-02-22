@@ -29,7 +29,7 @@
           class="col-6 d-flex"
         >
           <div
-            class="
+            class="selected
               col-6
               p-4
               d-flex
@@ -57,8 +57,8 @@
               align-content-end
             "
           >
-            <p class="text-secondary">{{ teacher.text }}</p>
-            <div
+            <p class="px-2 text-secondary">{{ teacher.text }}</p>
+            <div role="button"
               class="bg-orange text-white mx-1 my-4"
               v-for="(icon, index) in teacher.icons"
               :key="index"
@@ -149,5 +149,11 @@ section {
 .icon {
   height: 50px;
   max-width: 50px;
+}
+.selected{
+  cursor: pointer;
+}
+.selected:hover{
+ box-shadow: 0px 0px 1px 1px gray;
 }
 </style>

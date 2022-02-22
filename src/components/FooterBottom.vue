@@ -1,7 +1,7 @@
 <template>
   <section class="bg-gray text-center align-self-end">
     <div class="container d-flex justify-content-center align-items-center">
-      <div
+      <div role="button"
         class="bg-orange text-white mx-1 my-4"
         v-for="(icon, index) in icons"
         :key="index"

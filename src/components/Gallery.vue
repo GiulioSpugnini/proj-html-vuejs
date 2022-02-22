@@ -100,4 +100,14 @@ figure {
 #selectedImg img {
   max-width: 450px;
 }
+img{
+  border: 2px solid transparent;
+}
+img:hover{
+  border-bottom: 2px solid #fe6601;
+}
+button:hover{
+  background-color: #fe6601;
+  color: white !important;
+}
 </style>

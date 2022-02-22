@@ -55,7 +55,7 @@ section {
   border: 1px solid white;
   width: 150px;
   height: 150px;
-  padding: 50px;
+  padding-top: 50px;
   margin: 0 auto;
 }
 h4{
