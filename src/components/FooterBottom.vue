@@ -9,7 +9,7 @@
         <img :src="icon" alt="" />
       </div>
     </div>
-    <p class="text-secondary m-0">
+    <p class="text-secondary m-0 py-4">
       Fable - Children kindergarten WordPress Theme by QuanticaLabs
     </p>
   </section>
