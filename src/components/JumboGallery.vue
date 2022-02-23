@@ -7,22 +7,21 @@
         class="position-absolute w-100"
         :style="{ backgroundImage: 'url(' + jumboFooterBg + ')' }"
       >
-        <div class="container d-flex justify-content-between">
-          <h2 class="my-5 fs-1 d-inline text-light">
-            See Our Kindergarten Photo Gallery!
-          </h2>
-          <button class="px-3 m-5 bg-transparent text-white">VIEW GALLERY</button>
-        </div>
+        <JumboFooter :textButton="textButton" :title="title"/>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import JumboFooter from './MicroComponents/JumboFooter.vue';
 export default {
+  components: { JumboFooter },
   name: "JumboGallery",
   data() {
     return {
+      title: 'See Our Kindergarten Photo Gallery!',
+      textButton: 'VIEW GALLERY',
       jumboBg: require("../assets/img/slider_slide3_background.png"),
       jumboFooterBg: require("../assets/img/pattern.png"),
       imgs: [
@@ -54,9 +53,5 @@ img {
 #jumboFooter {
   top: 100%;
   left: 0;
-}
-button:hover{
- background-color: white !important;
- color: #4c4a9b !important;
 }
 </style>

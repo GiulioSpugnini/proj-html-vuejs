@@ -7,21 +7,20 @@
       <img v-if="index===currentIndex" class="position-absolute" :style="{top: baby.top}&& {left: baby.left}" :src="baby.img" />
 
       </div>
-      <div id="jumboFooter" class="position-absolute w-100" :style="{ backgroundImage: 'url(' + jumboFooterBg + ')' }">
-          <div class="container d-flex justify-content-between">
-              <h2 class="my-5 fs-1 d-inline text-light">How to Enroll Your Child to a Class?</h2>
-              <button class="px-3 m-5 bg-transparent text-white">LEARN MORE</button>
-          </div>
-      </div>
+      <JumboFooter :textButton="textButton" :title="title"/>
     </div>
   </section>
 </template>
 
 <script>
+import JumboFooter from './MicroComponents/JumboFooter.vue';
 export default {
+  components: { JumboFooter },
   name: "jumbotron",
   data() {
     return {
+      title: 'How to Enroll Your Child to a Class?',
+      textButton: 'LEARN MORE',
       currentIndex: 0,
       autoplay: undefined,
       babies:[
@@ -45,7 +44,6 @@ export default {
         },
       ],
       jumboBg: require("../assets/img/slider_slide3_background.png"),
-      jumboFooterBg: require("../assets/img/pattern.png"),
     };
   },
   methods:{
@@ -98,12 +96,5 @@ top: 0%;
 #babyAbaco{
   top: 0%;
   left: 55%;
-}
-button{
-  border: 2px solid white;
-}
-button:hover{
- background-color: white !important;
- color: #4c4a9b !important;
 }
 </style>
