@@ -1,13 +1,7 @@
 <template>
   <section class="container">
     <div class="row text-center">
-      <div class="col-12">
-        <h1>Our Classes</h1>
-        <p class="text-secondary">
-          Our preschool program has four dedicated classes
-        </p>
-        <img src="../assets/img/header_divider.png" alt="" />
-      </div>
+      <TitleWithDivisor :title="title" :text="text" />
       <div
         v-for="(classe, index) in classes"
         :key="index"
@@ -41,7 +35,9 @@
         </div>
         <div class="col-6 position-relative">
           <img class="classe" :src="classe.img" alt="" />
-          <button class="position-absolute bg-orange text-white border-0 p-2">READ MORE</button>
+          <button class="position-absolute bg-orange text-white border-0 p-2">
+            READ MORE
+          </button>
         </div>
       </div>
     </div>
@@ -49,10 +45,14 @@
 </template>
 
 <script>
+import TitleWithDivisor from "./MicroComponents/TitleWithDivisor.vue";
 export default {
   name: "Classes",
+  components: { TitleWithDivisor },
   data() {
     return {
+      title: "Our Classes",
+      text: "Our preschool program has four dedicated classes",
       classes: [
         {
           title: "Little Lambs",
@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style scoped>
-section{
+section {
   padding: 100px 0 100px 0;
 }
 .classe {
@@ -99,7 +99,7 @@ section{
   border-right: 1px solid gray;
   height: 60px;
 }
-button{
+button {
   top: 100%;
   transform: translate(-100%, -100%);
   width: 150px;

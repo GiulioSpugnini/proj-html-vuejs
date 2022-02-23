@@ -2,11 +2,7 @@
   <section class="bg-gray">
       <div class="container">
         <div class="row text-center justify-content-center">
-          <div class="col-12">
-            <h1 class="purple">Contact Us</h1>
-            <p class="text-secondary">Our postal address and contact details</p>
-            <img class="py-4" src="../assets/img/header_divider.png" alt="" />
-          </div>
+          <TitleWithDivisor :title="title" :text="text" />
           <div v-for="(contact, index) in contacts" :key="index" class="col-3">
             <img :src="contact.icon" />
             <h4 class="purple py-3">{{ contact.name }}</h4>
@@ -36,10 +32,14 @@
 </template>
 
 <script>
+import TitleWithDivisor from './MicroComponents/TitleWithDivisor.vue';
 export default {
   name: "Contacts",
+  components:{TitleWithDivisor},
   data() {
     return {
+      title: 'Contact Us',
+      text: 'Our postal address and contact details',
       contacts: [
         {
           icon: require("../assets/img/envelope (1).png"),

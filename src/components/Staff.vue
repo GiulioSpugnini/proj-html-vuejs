@@ -2,15 +2,9 @@
   <section class="bg-gray">
     <div class="container">
       <div class="row text-center">
-        <div class="col-12">
-          <h1 class="purple">Meet Our Staff</h1>
-          <p class="text-secondary">
-            With education and experience in early childhood care
-          </p>
-          <img src="../assets/img/header_divider.png" alt="" />
-        </div>
+        <TitleWithDivisor :title="title" :text="text" />
         <div class="col-6 p-4 text-start">
-          <h3>
+          <h3 class="purple">
             Our staff consists of three teachers and one assistant with
             experience in early childhood care.
           </h3>
@@ -29,7 +23,8 @@
           class="col-6 d-flex"
         >
           <div
-            class="selected
+            class="
+              selected
               col-6
               p-4
               d-flex
@@ -58,7 +53,8 @@
             "
           >
             <p class="px-2 text-secondary">{{ teacher.text }}</p>
-            <div role="button"
+            <div
+              role="button"
               class="bg-orange text-white mx-1 my-4"
               v-for="(icon, index) in teacher.icons"
               :key="index"
@@ -73,10 +69,14 @@
 </template>
 
 <script>
+import TitleWithDivisor from "./MicroComponents/TitleWithDivisor.vue";
 export default {
   name: "Staff",
+  components: { TitleWithDivisor },
   data() {
     return {
+      title: "Meet Our Staff",
+      text: "With education and experience in early childhood care",
       teachers: [
         {
           name: "Ruth Richie",
@@ -150,10 +150,10 @@ section {
   height: 50px;
   max-width: 50px;
 }
-.selected{
+.selected {
   cursor: pointer;
 }
-.selected:hover{
- box-shadow: 0px 0px 1px 1px gray;
+.selected:hover {
+  box-shadow: 0px 0px 1px 1px gray;
 }
 </style>

@@ -1,53 +1,53 @@
 <template>
   <section class="bg-gray">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-12">
-            <h1 class="purple">What's New</h1>
-            <p class="text-secondary">Fable daycare, preschool, and kindergarten</p>
-            <img class="py-4" src="../assets/img/header_divider.png" alt="" />
-          </div>
-          <div
-            v-for="(blog, index) in news"
-            :key="index"
-            class="
-              col-4
-              d-flex
-              text-start
-              flex-column
-              justify-content-center
-              align-items-start
-              py-4
-            "
-          >
-            <h6 class="text-secondary">{{ blog.date }}</h6>
-            <figure class="">
-              <img :src="blog.img" alt="" />
-            </figure>
-            <h4 class="purple">{{ blog.title }}</h4>
-            <p class="w-75 text-secondary">{{ blog.text }}</p>
-            <div class="col-12 d-flex border-top py-2">
-              <div class="col-6 d-flex justify-content-start align-items-center">
-                <img :src="require('../assets/img/author.png')" alt="" />
-                <p class="px-3 my-0">Anna Brown</p>
-              </div>
-              <div class="col-6 d-flex justify-content-start align-items-center">
-                <img :src="require('../assets/img/category.png')" alt="" />
-                <p class="px-3 my-0">Dance,Education</p>
-              </div>
+    <div class="container">
+      <div class="row text-center">
+        <TitleWithDivisor :title="title" :text="text" />
+        <div
+          v-for="(blog, index) in news"
+          :key="index"
+          class="
+            col-4
+            d-flex
+            text-start
+            flex-column
+            justify-content-center
+            align-items-start
+            py-4
+          "
+        >
+          <h6 class="text-secondary">{{ blog.date }}</h6>
+          <figure class="">
+            <img :src="blog.img" alt="" />
+          </figure>
+          <h4 class="purple">{{ blog.title }}</h4>
+          <p class="w-75 text-secondary">{{ blog.text }}</p>
+          <div class="col-12 d-flex border-top py-2">
+            <div class="col-6 d-flex justify-content-start align-items-center">
+              <img :src="require('../assets/img/author.png')" alt="" />
+              <p class="px-3 my-0">Anna Brown</p>
+            </div>
+            <div class="col-6 d-flex justify-content-start align-items-center">
+              <img :src="require('../assets/img/category.png')" alt="" />
+              <p class="px-3 my-0">Dance,Education</p>
             </div>
           </div>
-          <button class="bg-orange text-white border-0">GO TO BLOG</button>
         </div>
+        <button class="bg-orange text-white border-0">GO TO BLOG</button>
       </div>
+    </div>
   </section>
 </template>
 
 <script>
+import TitleWithDivisor from "./MicroComponents/TitleWithDivisor.vue";
 export default {
   name: "News",
+  components: { TitleWithDivisor },
   data() {
     return {
+      title: "What's New",
+      text: "Fable daycare, preschool, and kindergarten",
       news: [
         {
           date: "October 03,2014",
